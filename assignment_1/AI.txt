@@ -1,0 +1,1 @@
+nessbot: custom player built using iterative deepening and alphabeta pruning

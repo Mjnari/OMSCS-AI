@@ -1,0 +1,55 @@
+{
+    "total_points_available": 100,
+    "tests": [
+        {
+            "output": {
+                "points_available": 5,
+                "points_awarded": null
+            },
+            "traceback": "Traceback (most recent call last):\n  File \"/home/vmuser_igsukmfp/AIResult.py\", line 26, in func_wrapper\n    ans = func(self)\n  File \"run.py\", line 128, in test_build_decision_tree_validation\n    accuracy = dt.accuracy( classifier_output, classes )\n  File \"/home/vmuser_igsukmfp/workspace/decision_trees.py\", line 77, in accuracy\n    raise NotImplemented()\nTypeError: 'NotImplementedType' object is not callable\n",
+            "description": "(1b). Test for simple binary decision tree validation. (5 points)"
+        },
+        {
+            "output": {
+                "points_available": 30,
+                "points_awarded": null
+            },
+            "traceback": "Traceback (most recent call last):\n  File \"/home/vmuser_igsukmfp/AIResult.py\", line 26, in func_wrapper\n    ans = func(self)\n  File \"run.py\", line 157, in test_build_decision_trees_automatically\n    tree.fit(train_features, train_labels)\n  File \"/home/vmuser_igsukmfp/workspace/decision_trees.py\", line 104, in fit\n    self.root = self.__build_tree__(features, classes)\n  File \"/home/vmuser_igsukmfp/workspace/decision_trees.py\", line 111, in __build_tree__\n    raise NotImplemented()\nTypeError: 'NotImplementedType' object is not callable\n",
+            "description": "(2a) Test for building decision trees automatically. 30 pts."
+        },
+        {
+            "output": {
+                "points_available": 10,
+                "points_awarded": null
+            },
+            "traceback": "Traceback (most recent call last):\n  File \"/home/vmuser_igsukmfp/AIResult.py\", line 26, in func_wrapper\n    ans = func(self)\n  File \"run.py\", line 180, in test_build_decision_trees_automatically_validation\n    ten_folds = dt.generate_k_folds(dataset, 10)\n  File \"/home/vmuser_igsukmfp/workspace/decision_trees.py\", line 136, in generate_k_folds\n    raise NotImplemented()\nTypeError: 'NotImplementedType' object is not callable\n",
+            "description": "(2b). Test for automatic decision trees validation. 10 pts"
+        },
+        {
+            "output": {
+                "points_available": 10,
+                "points_awarded": null
+            },
+            "traceback": "Traceback (most recent call last):\n  File \"/home/vmuser_igsukmfp/AIResult.py\", line 26, in func_wrapper\n    ans = func(self)\n  File \"run.py\", line 273, in test_challenge_classifier\n    tree = dt.ChallengeClassifier()\n  File \"/home/vmuser_igsukmfp/workspace/decision_trees.py\", line 171, in __init__\n    raise NotImplemented()\nTypeError: 'NotImplementedType' object is not callable\n",
+            "description": "(4). Test for challenge classifier. (10 points)"
+        },
+        {
+            "output": {
+                "points_available": 30,
+                "points_awarded": null
+            },
+            "traceback": "Traceback (most recent call last):\n  File \"/home/vmuser_igsukmfp/AIResult.py\", line 26, in func_wrapper\n    ans = func(self)\n  File \"run.py\", line 221, in test_random_forests\n    tree.fit(train_features, train_labels)\n  File \"/home/vmuser_igsukmfp/workspace/decision_trees.py\", line 157, in fit\n    raise NotImplemented()\nTypeError: 'NotImplementedType' object is not callable\n",
+            "description": "(3). Test for random forest classification. (30 points)"
+        },
+        {
+            "output": {
+                "points_available": 15,
+                "points_awarded": 7.5,
+                "autograder_comments": "1a results.\nCorrect number of nodes for basic binary decision tree\nBasic binary decision tree not accurate enough, with a true positive rate of 0.625\n"
+            },
+            "traceback": "Traceback (most recent call last):\n  File \"/home/vmuser_igsukmfp/AIResult.py\", line 26, in func_wrapper\n    ans = func(self)\n  File \"run.py\", line 107, in test_build_decision_tree\n    self.assertEqual(score, 15, \"Build Basic Binary Decision Tree\")\nAssertionError: Build Basic Binary Decision Tree\n",
+            "description": "(1a). Test for building a simple binary decision tree. (15 points)"
+        }
+    ],
+    "total_points_awarded": 7.5
+}

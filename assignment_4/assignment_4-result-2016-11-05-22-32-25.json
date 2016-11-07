@@ -1,0 +1,60 @@
+{
+    "total_points_available": 100,
+    "tests": [
+        {
+            "output": {
+                "points_available": 10,
+                "points_awarded": 0,
+                "autograder_comments": "4 results\nTraining time in seconds: 62.639132, Testing time in seconds: 62.651339 \nChallenge classier accuracy unsatisfactory. Training: 0.7, Testing: 0.9 \n"
+            },
+            "traceback": "Traceback (most recent call last):\n  File \"/home/vmuser_nuhtpaiz/AIResult.py\", line 26, in func_wrapper\n    ans = func(self)\n  File \"run.py\", line 294, in test_challenge_classifier\n    self.assertEqual(score, 10, \"Challenge Classifier network Distribution\")\nAssertionError: Challenge Classifier network Distribution\n",
+            "description": "(4). Test for challenge classifier. (10 points)"
+        },
+        {
+            "output": {
+                "points_available": 15,
+                "points_awarded": 15.0,
+                "autograder_comments": "1a results.\nCorrect number of nodes for basic binary decision tree\nBasic binary decision tree sufficiently accurate\n"
+            },
+            "traceback": "",
+            "description": "(1a). Test for building a simple binary decision tree. (15 points)"
+        },
+        {
+            "output": {
+                "points_available": 5,
+                "points_awarded": 5,
+                "autograder_comments": "1b results.\nCorrect values for accuracy, precision and recall.\n"
+            },
+            "traceback": "",
+            "description": "(1b). Test for simple binary decision tree validation. (5 points)"
+        },
+        {
+            "output": {
+                "points_available": 30,
+                "points_awarded": 30,
+                "autograder_comments": "2a results\nDecision tree accuracy of 1.0 satisfactory.\n"
+            },
+            "traceback": "",
+            "description": "(2a) Test for building decision trees automatically. 30 pts."
+        },
+        {
+            "output": {
+                "points_available": 10,
+                "points_awarded": 10,
+                "autograder_comments": "2b results\nGenerate k-folds accuracy of 0.915384615385 satisfactory.\n"
+            },
+            "traceback": "",
+            "description": "(2b). Test for automatic decision trees validation. 10 pts"
+        },
+        {
+            "output": {
+                "points_available": 30,
+                "points_awarded": 30,
+                "autograder_comments": "3 results\nRandom forest accuracy of 0.8 satisfactory.\n"
+            },
+            "traceback": "",
+            "description": "(3). Test for random forest classification. (30 points)"
+        }
+    ],
+    "total_points_awarded": 90.0
+}

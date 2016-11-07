@@ -1,0 +1,63 @@
+{
+    "tests": [
+        {
+            "output": {
+                "points_available": 5
+            },
+            "description": "(2b). Test that the posterior is calculated correctly. (5 points)"
+        },
+        {
+            "output": {
+                "points_available": 20
+            },
+            "description": "(2d). Test to check convergence of Gibbs. (20 points)"
+        },
+        {
+            "output": {
+                "points_available": 20
+            },
+            "description": "(2c). Test that Gibbs is implemented correctly. (20 points)"
+        },
+        {
+            "output": {
+                "points_available": 15
+            },
+            "description": "(2a). Test that the sports network is set up correctly. (15 points)"
+        },
+        {
+            "output": {
+                "points_available": 5,
+                "return_type_check": false
+            },
+            "description": "(2e). Test for complexity of hypothetical n-teams enumeration runtime. (5 points)"
+        },
+        {
+            "output": {
+                "points_available": 5,
+                "return_type_check": true
+            },
+            "description": "(1b) Test for the polytree question. 5 pts."
+        },
+        {
+            "output": {
+                "points_available": 10,
+                "return_type_check": true
+            },
+            "description": "(1d). Test for the inference task for various power plant situations: marginal alarm, gauge, and temperature. (10 points)"
+        },
+        {
+            "output": {
+                "points_available": 10,
+                "return_type_check": true
+            },
+            "description": "(1c). Test for the probability distribution of the power plant Bayesian network. (10 points)"
+        },
+        {
+            "output": {
+                "points_available": 10,
+                "return_type_check": true
+            },
+            "description": "(1a). Test for the structure of the power plant Bayesian network. (10 points)"
+        }
+    ]
+}

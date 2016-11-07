@@ -1,0 +1,80 @@
+{
+    "total_points_available": 101,
+    "tests": [
+        {
+            "output": {
+                "points_available": 5,
+                "win_ratio": 0.5666666666666667,
+                "points_awarded": null,
+                "num_invalid_moves": 13,
+                "num_timeouts": 0
+            },
+            "traceback": "Traceback (most recent call last):\n  File \"/home/vmuser_rygbzaqk/AIResult.py\", line 26, in func_wrapper\n    ans = func(self)\n  File \"run.py\", line 153, in test_beats_thad\n    self.evaluate_against(TestAI(use_alphabeta=True, eval_fn=StarnerEvalFn()), 0.6)\n  File \"run.py\", line 65, in evaluate_against\n    \"Your player didn't win more than a %f fraction of the games.\" % win_thresh)\nAssertionError: Your player didn't win more than a 0.600000 fraction of the games.\n",
+            "description": "Beats Thad 2.0"
+        },
+        {
+            "output": {
+                "points_available": 5,
+                "win_ratio": 0.5,
+                "points_awarded": null,
+                "num_invalid_moves": 15,
+                "num_timeouts": 0
+            },
+            "traceback": "Traceback (most recent call last):\n  File \"/home/vmuser_rygbzaqk/AIResult.py\", line 26, in func_wrapper\n    ans = func(self)\n  File \"run.py\", line 158, in test_dominates_thad\n    self.evaluate_against(TestAI(use_alphabeta=True, eval_fn=StarnerEvalFn()), 0.9)\n  File \"run.py\", line 65, in evaluate_against\n    \"Your player didn't win more than a %f fraction of the games.\" % win_thresh)\nAssertionError: Your player didn't win more than a 0.900000 fraction of the games.\n",
+            "description": "Dominates Thad 2.0"
+        },
+        {
+            "output": {
+                "points_available": 1,
+                "win_ratio": 0.5666666666666667,
+                "points_awarded": null,
+                "num_invalid_moves": 13,
+                "num_timeouts": 0
+            },
+            "traceback": "Traceback (most recent call last):\n  File \"/home/vmuser_rygbzaqk/AIResult.py\", line 26, in func_wrapper\n    ans = func(self)\n  File \"run.py\", line 163, in test_dominates_thad_2_1\n    self.evaluate_against(TestAI(use_alphabeta=True, eval_fn=StarnerEvalFn(), opp_eval_fn=StarnerOpponentEvalFn()), 0.9)\n  File \"run.py\", line 65, in evaluate_against\n    \"Your player didn't win more than a %f fraction of the games.\" % win_thresh)\nAssertionError: Your player didn't win more than a 0.900000 fraction of the games.\n",
+            "description": "Dominates Thad 2.0.1"
+        },
+        {
+            "output": {
+                "points_available": 20,
+                "win_ratio": 0.6333333333333333,
+                "points_awarded": 20,
+                "num_invalid_moves": 11,
+                "num_timeouts": 0
+            },
+            "traceback": "",
+            "description": "Beats AlphaBetaPlayer"
+        },
+        {
+            "output": {
+                "points_available": 30,
+                "win_ratio": 0.8333333333333334,
+                "points_awarded": 30,
+                "num_invalid_moves": 5,
+                "num_timeouts": 0
+            },
+            "traceback": "",
+            "description": "Beats MinimaxPlayer"
+        },
+        {
+            "output": {
+                "points_available": 30,
+                "win_ratio": 0.9666666666666667,
+                "points_awarded": 30,
+                "num_invalid_moves": 1,
+                "num_timeouts": 0
+            },
+            "traceback": "",
+            "description": "Definitely better than RandomPlayer"
+        },
+        {
+            "output": {
+                "points_available": 10,
+                "points_awarded": 10
+            },
+            "traceback": "",
+            "description": "Test output of OpenMoveEvalFn"
+        }
+    ],
+    "total_points_awarded": 90
+}

@@ -1,0 +1,233 @@
+"""
+Contains various local tests for Assignment 3.
+"""
+#Part 1a
+import numpy as np
+import warnings
+warnings.filterwarnings("ignore", category=np.VisibleDeprecationWarning)
+
+from probability_solution import *
+
+def test_exam():
+    net = make_exam_net()
+    print get_burglar_prob(net)
+    print get_ghost_prob(net)
+    print get_alarm3_prob(net)
+    print get_ghost_prob2(net)
+
+
+def main():
+    test_exam()
+
+
+
+
+# def network_setup_test(power_plant):
+#     """Test that the power plant network has the proper number of nodes and edges."""
+#     nodes = power_plant.nodes
+#     if(len(nodes)==5):
+#         print('correct number of nodes')
+#         total_links = sum([len(n.children) for n in nodes] + [len(n.parents) for n in nodes])
+#         if(total_links == 10):
+#             print('correct number of edges between nodes')
+#         else:
+#             print('incorrect number of edges between nodes')
+#     else:
+#         print('incorrect number of nodes')
+#
+# #Part 1c
+# def probability_setup_test(power_plant):
+#     """Test that all nodes in the power plant network have proper probability distributions.
+#     Note that all nodes have to be named predictably for tests to run correctly."""
+#
+#     # first test temperature distribution
+#     T_node = power_plant.get_node_by_name('temperature')
+#     if(T_node is not None):
+#         T_dist = T_node.dist.table
+#         if(len(T_dist) == 2):
+#             print('correct temperature distribution size')
+#             test_prob = T_dist[0]
+#             if(int(test_prob*100) == 80):
+#                 print('correct temperature distribution')
+#         else:
+#             print('incorrect temperature distribution size')
+#
+#     # then faulty gauge distribution
+#     F_G_node = power_plant.get_node_by_name('faulty gauge')
+#     if(F_G_node is not None):
+#         F_G_dist = F_G_node.dist.table
+#         rows, cols = F_G_dist.shape
+#         if(rows == 2 and cols == 2):
+#             print('correct faulty gauge distribution size')
+#             test_prob1 = F_G_dist[0][1]
+#             test_prob2 = F_G_dist[1][0]
+#             if(int(test_prob1*100) == 5 and int(test_prob2*100) == 20):
+#                 print('correct faulty gauge distribution')
+#             else:
+#                 print('incorrect faulty gauge distribution')
+#         else:
+#             print('incorrect faulty gauge distribution size')
+#
+#     # faulty alarm distribution
+#     F_A_node = power_plant.get_node_by_name('faulty alarm')
+#     if(F_A_node is not None):
+#         F_A_dist = F_A_node.dist.table
+#         if(len(F_A_dist) == 2):
+#             print('correct faulty alarm distribution size')
+#             test_prob = F_A_dist[0]
+#             if(int(test_prob*100) == 85):
+#                 print('correct faulty alarm distribution')
+#         else:
+#             print('incorrect faulty alarm distribution size')
+#
+#     # gauge distribution
+#     # can't test exact probabilities because
+#     # order of probabilities is not guaranteed
+#     G_node = power_plant.get_node_by_name('gauge')
+#     if(G_node is not None):
+#         G_dist = G_node.dist.table
+#         rows1, rows2, cols = G_dist.shape
+#         if(rows1 == 2 and rows2 == 2 and cols == 2):
+#             print('correct gauge distribution size')
+#         else:
+#             print('incorrect gauge distribution size')
+#
+#     # alarm distribution
+#     A_node = power_plant.get_node_by_name('alarm')
+#     if(A_node is not None):
+#         A_dist = A_node.dist.table
+#         rows1, rows2, cols = A_dist.shape
+#         if(rows1 == 2 and rows2 == 2 and cols == 2):
+#             print('correct alarm distribution size')
+#         else:
+#             print('incorrect alarm distribution size')
+#
+#
+# #Part 2a Test
+# def games_network_test(games_net):
+#     """Test that the games network has the proper number of nodes and edges."""
+#     nodes = games_net.nodes
+#     if(len(nodes)==6):
+#         print('correct number of nodes')
+#         total_links = sum([len(n.children) for n in nodes] + [len(n.parents) for n in nodes])
+#         if(total_links == 12 ):
+#             print('correct number of edges between nodes')
+#         else:
+#             print('incorrect number of edges between nodes')
+#     else:
+#         print('incorrect number of nodes')
+#
+#
+#     # Now testing that all nodes in the games network have proper probability distributions.
+#     # Note that all nodes have to be named predictably for tests to run correctly.
+#
+#     # First testing team distributions.
+#     # You can check this for all teams i.e. A,B,C (by replacing the first line for 'B','C')
+#
+#     A_node = games_net.get_node_by_name('A')
+#     if(A_node is not None):
+#         A_dist = A_node.dist.table
+#         if(len(A_dist) == 4):
+#             print('correct team distribution size')
+#             test_prob = A_dist[0]
+#             test_prob2 = A_dist[2]
+#             if(int(test_prob*100) == 15 and int(test_prob2*100)==30):
+#                 print('correct team distribution')
+#             else:
+#                 print('incorrect team distributions')
+#         else:
+#             print('incorrect team distribution size')
+#     else:
+#         print 'No node with the name A exists.'
+#
+#     # Now testing match distributions.
+#     # You can check this for all matches i.e. AvB,BbC,CvA (by replacing the first line)
+#     AvB_node = games_net.get_node_by_name('AvB')
+#     if(AvB_node is not None):
+#         AvB_dist = AvB_node.dist.table
+#         rows1, rows2, cols = AvB_dist.shape
+#         if(rows1 == 4 and rows2 == 4 and cols == 3):
+#             print('correct match distribution size')
+#             flag1 = True
+#             flag2 = True
+#             flag3 = True
+#             for i in range(0, 4):
+#                 for j in range(0,4):
+#                     x = AvB_dist[i,j,]
+#                     if i==j:
+#                         if x[0]!=x[1]:
+#                             flag1=False
+#                     if j>i:
+#                         if not(x[1]>x[0] and x[1]>x[2]):
+#                             flag2=False
+#                     if j<i:
+#                         if not (x[0]>x[1] and x[0]>x[2]):
+#                             flag3=False
+#             if (flag1 and flag2 and flag3):
+#                 print('correct match distribution')
+#             else:
+#                 if not flag1:
+#                     print('incorrect match distribution for equal skill levels')
+#                 if ((not flag2) or (not flag3)):
+#                     print('incorrect match distribution: team with higher skill should have higher probability of winning')
+#         else:
+#             print('incorrect match distribution size')
+#     else:
+#         print 'No node with the name AvB exists.'
+#
+# #Part 2b Test
+# def posterior_test(posterior):
+#     if (abs(posterior[0]-0.25)<0.01 and abs(posterior[1]-0.42)<0.01 and abs(posterior[2]-0.31)<0.01):
+#         print 'correct posterior'
+#     else:
+#         print 'incorrect posterior calculated'
+
+
+
+# def test1a():
+#     power_plant = make_power_plant_net()
+#     network_setup_test(power_plant)
+#
+# def test1c():
+#     power_plant = make_power_plant_net()
+#     set_probability(power_plant)
+#     probability_setup_test(power_plant)
+# #
+# def test1d():
+#     power_plant = make_power_plant_net()
+#     power_plant = set_probability(power_plant)
+#     print 'alarm', get_alarm_prob(power_plant, True)
+#     print 'gauge', get_gauge_prob(power_plant, True)
+#     print 'temperature', get_temperature_prob(power_plant, True)
+# #
+# def test2a():
+#     from probability_tests import games_network_test
+#     game_net = get_game_network()
+#     games_network_test(game_net)
+# #
+# def test2b():
+#     from probability_tests import posterior_test
+#     game_net = get_game_network()
+#     posterior = calculate_posterior(game_net)
+#     posterior_test(posterior)
+# #
+# def test2c():
+#     game_net = get_game_network()
+#     n = 5
+#     initial_state = [0] * (2 * n)
+#     # initial_state = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+#     sample = Gibbs_sampler(game_net, initial_state, n, [])
+#     print sample
+#
+# def test2d():
+#     game_net = get_game_network()
+#     n = 5
+#     initial_state = [0] * (2 * n)
+#     match_results = [0, 0, 0, 0]
+#     net5 = get_5game_network()
+#     print converge_count_Gibbs(game_net, initial_state, match_results, n)
+#     print calculate_posterior2(net5)
+
+if __name__ == '__main__':
+  main()
+
